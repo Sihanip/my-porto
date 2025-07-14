@@ -16,5 +16,11 @@ export default defineConfig({
   build: {
     outDir: 'dist'
   },
+  optimizeDeps: {
+    include: ['cookie']
+  },
+  ssr: {
+    noExternal: ['cookie']
+  },
   base: './'
 })
