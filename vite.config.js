@@ -12,6 +12,13 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
       crypto: 'crypto-browserify'
     },
+    build: {
+      outDir: 'dist'
+    },
+    server: {
+      port: 5173
+    },
+    base: './'
   },
 });
 
