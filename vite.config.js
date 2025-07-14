@@ -1,24 +1,22 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
-import path from "path";
-import rollupNodePolyFill from 'rollup-plugin-node-polyfills';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from 'tailwindcss'
+import path from 'path'
+import commonjs from '@rollup/plugin-commonjs'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), rollupNodePolyFill()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    commonjs()
+  ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-      crypto: 'crypto-browserify'
-    },
-    build: {
-      outDir: 'dist'
-    },
-    server: {
-      port: 5173
-    },
-    base: './'
+      "@": path.resolve(__dirname, "./src")
+    }
   },
-});
-
+  build: {
+    outDir: 'dist'
+  },
+  base: './'
+})
