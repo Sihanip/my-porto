@@ -10,7 +10,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src")
+      "@": path.resolve(__dirname, "./src"),
+      "lucide-react": "lucide-react/cjs" // ⬅️ Force CJS build
     }
   },
   build: {
@@ -20,7 +21,8 @@ export default defineConfig({
     include: ['react', 'react-dom', 'lucide-react', 'cookie']
   },
   ssr: {
-    noExternal: ['react-router', 'cookie', 'lucide-react']
+    noExternal: ['react-router', 'cookie', 'lucide-react'],
+    external: ['react', 'react-dom'] // ⬅️ Mark react as external
   },
   base: './'
 });
