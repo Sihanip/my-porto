@@ -20,7 +20,7 @@ export default defineConfig({
     include: ['cookie']
   },
   ssr: {
-    noExternal: ['cookie']
+    noExternal: ['react-router', 'cookie']
   },
   base: './'
 })
