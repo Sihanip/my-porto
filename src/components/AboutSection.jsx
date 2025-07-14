@@ -41,7 +41,7 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="/cv/CV-HANIF NUR F" download="CV-HANIF NUR F.pdf"
+                href="/cv/CV-HANIF-NUR-F.pdf" download="CV-HANIF-NUR-F.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV
